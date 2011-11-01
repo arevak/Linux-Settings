@@ -1,0 +1,13 @@
+termcapinfo xterm-color|xterm|xterms|xs|rxvt ti@:te@
+term xterm
+hardstatus alwayslastline 
+#hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
+#hardstatus string '%{= kG}%-Lw%{= kW}%50> [%n%f* %t]%{= kG}%+Lw%< %{= kG}%-=%c:%s%{-}'
+hardstatus string '%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<'
+#bindkey ^[[5D prev
+#bindkey ^[[5C next
+#bindkey ^[[1;2D prev
+#bindkey ^[[1;2C next
+#bindkey ^[^[[D prev
+#bindkey ^[^[[C next
+vbell off
