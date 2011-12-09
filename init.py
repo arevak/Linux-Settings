@@ -1,23 +1,15 @@
 #! /usr/bin/env python
 import os;
 
-screenrc = os.environ["HOME"]+"/.screenrc";
-if not os.path.exists(screenrc):
-	print "Symlinking screenrc...";
-	os.symlink(os.getcwd()+"/screen/.screenrc", screenrc);
-else:
-	print screenrc + " already exists";
+def create_link(targetname, srcdir):
+	lntarget = os.environ["HOME"]+"/"+targetname;
+	if not os.path.exists(lntarget):
+		print "Symlinking " + targetname + "...";
+		os.symlink(os.getcwd()+"/"+srcdir+"/"+targetname, lntarget);
+	else:
+		print lntarget + " already exists";
 
-vimrc = os.environ["HOME"]+"/.vimrc";
-if not os.path.exists(vimrc):
-	print "Symlinking .vimrc...";
-	os.symlink(os.getcwd()+"/vim/.vimrc", vimrc);
-else:
-	print vimrc + " already exists";
-
-vim = os.environ["HOME"]+"/.vim";
-if not os.path.exists(vim):
-	print "Symlinking .vim...";
-	os.symlink(os.getcwd()+"/vim/.vim", vim);
-else:
-	print vim + " already exists";
+create_link('.screenrc', 'screen');
+create_link('.vimrc', 'vim');
+create_link('.vim', 'vim');
+create_link('.ackrc', 'ack');
