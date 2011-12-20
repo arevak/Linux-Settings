@@ -1,5 +1,5 @@
 termcapinfo xterm-color|xterm|xterms|xs|rxvt ti@:te@
-term xterm
+term xterm-256color
 hardstatus alwayslastline 
 #hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
 #hardstatus string '%{= kG}%-Lw%{= kW}%50> [%n%f* %t]%{= kG}%+Lw%< %{= kG}%-=%c:%s%{-}'
