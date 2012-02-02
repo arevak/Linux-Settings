@@ -1,0 +1,52 @@
+[core]
+	editor = vim
+[alias]
+	stat = status -s
+	outbound = diff --cached
+	ss = status -s
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr by %an)%Creset' --date=relative
+	dfn = diff --patience --ignore-space-change
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	sap = stash apply
+	ar = !git stash show -p --no-ext-diff $1 | git apply --reverse
+	save = stash save
+	sl = stash list
+[user]
+	name = Andrew Revak
+	email = andyr@huddler-inc.com
+[apply]
+	whitespace = nowarn
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[rerere]
+	enabled = 1
+[diff]
+	external = git_diff_wrapper
+[pager]
+	diff =
+[branch]
+	autosetuprebase = always
+[mergetool "vimdiff3"]
+	cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+[merge]
+	tool = vimdiff3
