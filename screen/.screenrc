@@ -11,3 +11,11 @@ hardstatus string '%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<'
 #bindkey ^[^[[D prev
 #bindkey ^[^[[C next
 vbell off
+defscrollback 4096
+
+# Launch default screens
+chdir /home/andrew/huddler
+screen -t vim 0 vim
+screen -t log 1 sudo tail -f /var/log/messages | grep andrew.huddler.com
+screen -t pgsql 2 psql -U postgres -h remus.huddler.com andrew_dev
+screen -t git 3 
