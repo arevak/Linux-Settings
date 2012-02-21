@@ -8,3 +8,6 @@
 
 :nmap <C-n> :tabnew<Space>
 :imap <C-n> <Esc>:tabnew<Space>
+
+:nnoremap <c-j> /<+.\{-1,}+><cr>c/+>/e<cr>
+:inoremap <c-j> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr>
