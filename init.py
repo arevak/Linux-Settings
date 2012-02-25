@@ -13,3 +13,11 @@ create_link('.screenrc', 'screen');
 create_link('.vimrc', 'vim');
 create_link('.vim', 'vim');
 create_link('.ackrc', 'ack');
+
+# For bash take the existing .bashrc rename it and relink it as .bashrc.local then link in this bashrc
+bashrc = os.environ["HOME"]+"/.bashrc";
+bashrclocal = os.environ["HOME"]+"/.bashrc.local";
+if not os.path.exists(bashrclocal):
+	print "Moving " + bashrc + "...";
+	os.rename(bashrc, bashrclocal);
+create_link('.bashrc', 'bash');
