@@ -10,6 +10,7 @@ def install_vim_plugin(plugindir, branch=False):
 	print "Updating plugin from git";
 	if not branch:
 		branch = 'master';
+	curdir = os.getcwd();
 	os.chdir(pluginpath);
 	os.system('git pull origin '+branch);
 
@@ -21,6 +22,8 @@ def install_vim_plugin(plugindir, branch=False):
 			if os.path.isdir(path):
 				cmd = 'cp -R ' + path + ' ' + targetpath;
 				os.system(cmd);
+
+	os.chdir(curdir);
 
 def create_link(targetname, srcdir):
 	lntarget = os.environ["HOME"]+"/"+targetname;
