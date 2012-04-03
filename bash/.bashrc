@@ -6,8 +6,10 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific aliases and functions
-alias ll='ls -l --color'
-alias la='ls -la --color'
+alias ll='ls -lh --color'
+alias la='ls -lah --color'
+alias lt='ls -lth --color'
+alias lh='ls -lSh --color'
 
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
