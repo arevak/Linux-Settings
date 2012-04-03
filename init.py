@@ -49,3 +49,6 @@ if not os.path.exists(bashrclocal):
 	print "Moving " + bashrc + "...";
 	os.rename(bashrc, bashrclocal);
 create_link('.bashrc', 'bash');
+
+# Adding in git-completion.bash
+create_link('git-completion.bash', 'bash')
