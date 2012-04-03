@@ -40,6 +40,7 @@ create_link('.ackrc', 'ack');
 
 # Update and install vim plugins in externals
 install_vim_plugin('vim-session');
+install_vim_plugin('vim-fugitive');
 
 # For bash take the existing .bashrc rename it and relink it as .bashrc.local then link in this bashrc
 bashrc = os.environ["HOME"]+"/.bashrc";
