@@ -37,6 +37,7 @@ create_link('.screenrc', 'screen');
 create_link('.vimrc', 'vim');
 create_link('.vim', 'vim');
 create_link('.ackrc', 'ack');
+create_link('.gitconfig', 'git');
 
 # Update and install vim plugins in externals
 install_vim_plugin('vim-session');
