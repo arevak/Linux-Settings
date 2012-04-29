@@ -11,7 +11,7 @@ hardstatus string '%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<'
 #bindkey ^[^[[D prev
 #bindkey ^[^[[C next
 vbell off
-defscrollback 4096
+defscrollback 30000
 
 # Launch default screens
 chdir /home/andrew/huddler
