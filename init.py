@@ -25,8 +25,12 @@ def install_vim_plugin(plugindir, branch=False):
 
 	os.chdir(curdir);
 
-def create_link(targetname, srcdir):
-	lntarget = os.environ["HOME"]+"/"+targetname;
+def create_link(targetname, srcdir, singlefile=False):
+	if singlefile == True:
+		lntarget = os.environ["HOME"]+"/"+srcdir+"/"+targetname;
+	else:
+		lntarget = os.environ["HOME"]+"/"+targetname;
+
 	if not os.path.exists(lntarget):
 		print "Symlinking " + targetname + "...";
 		os.symlink(os.getcwd()+"/"+srcdir+"/"+targetname, lntarget);
@@ -52,4 +56,5 @@ if not os.path.exists(bashrclocal):
 create_link('.bashrc', 'bash');
 
 # Adding in git-completion.bash
-create_link('git-completion.bash', 'bash')
+create_link('git-completion.bash', 'bash');
+create_link('git_diff_wrapper', 'bin', True);
