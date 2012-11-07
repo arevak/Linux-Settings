@@ -1,6 +1,9 @@
 #! /usr/bin/env python
+import sys;
 import os;
 import shutil;
+
+basePath = os.path.dirname(os.path.realpath(__file__));
 
 def install_vim_plugin(plugindir, branch=False):
 	externals_dir = os.getcwd()+"/externals";
@@ -32,8 +35,11 @@ def create_link(targetname, srcdir, singlefile=False):
 		lntarget = os.environ["HOME"]+"/"+targetname;
 
 	if not os.path.exists(lntarget):
+		if not os.path.exists(os.path.dirname(lntarget)):
+			print "Directory " + os.path.dirname(lntarget) + " does not exist, creating it";
+			os.mkdir(os.path.dirname(lntarget));
 		print "Symlinking " + targetname + "...";
-		os.symlink(os.getcwd()+"/"+srcdir+"/"+targetname, lntarget);
+		os.symlink(basePath+"/"+srcdir+"/"+targetname, lntarget);
 	else:
 		print lntarget + " already exists";
 
