@@ -1,3 +1,7 @@
+if $COLORTERM == 'gnome-terminal'
+	set t_Co=256
+endif
+
 " set backspace=indent,eol,start
 " set smartindent
 " set autoindent
