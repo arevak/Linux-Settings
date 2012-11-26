@@ -16,9 +16,15 @@ PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 # Prevent XOFF from being sent from keyboard but still allowing sofftware to send the commands
 stty ixoff -ixon
 
+# git autocompletion
 if [ -f ~/git-completion.bash ]; then
 	. ~/git-completion.bash
 fi
+
+# tmux autocompletion
+#if [ -f ~/tmux-completion.bash ]; then
+#	. ~/tmux-completion.bash
+#fi
 
 # Importing previously existing (or overridden bashrc via .bashrc.local which is made from init.py
 if [ -f ~/.bashrc.local ]; then
