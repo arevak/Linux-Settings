@@ -56,11 +56,13 @@ for line in process.stdout:
 	print line;
 process.wait();
 
-create_link('.screenrc', 'screen');
+#create_link('.screenrc', 'screen'); # using tmux now instead of screen
+create_link('.tmux.conf', 'tmux');
 create_link('.vimrc', 'vim');
 create_link('.vim', 'vim');
 create_link('.ackrc', 'ack');
 create_link('.gitconfig', 'git');
+create_link('sessions', 'tmux');
 
 # Update and install vim plugins in externals
 install_vim_plugin('vim-session');

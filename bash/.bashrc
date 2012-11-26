@@ -25,6 +25,9 @@ fi
 #if [ -f ~/tmux-completion.bash ]; then
 #	. ~/tmux-completion.bash
 #fi
+if [ -f ~/tmux-sessions.bash ]; then
+	. ~/tmux-sessions.bash
+fi
 
 # Importing previously existing (or overridden bashrc via .bashrc.local which is made from init.py
 if [ -f ~/.bashrc.local ]; then
