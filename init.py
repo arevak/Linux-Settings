@@ -2,6 +2,7 @@
 import sys;
 import os;
 import shutil;
+import subprocess;
 
 basePath = os.path.dirname(os.path.realpath(__file__));
 
@@ -42,6 +43,18 @@ def create_link(targetname, srcdir, singlefile=False):
 		os.symlink(basePath+"/"+srcdir+"/"+targetname, lntarget);
 	else:
 		print lntarget + " already exists";
+
+cmd = "git submodule init".split(" ");
+process = subprocess.Popen(cmd, stdout=subprocess.PIPE);
+for line in process.stdout:
+	print line;
+process.wait();
+
+cmd = "git submodule update".split(" ");
+process = subprocess.Popen(cmd, stdout=subprocess.PIPE);
+for line in process.stdout:
+	print line;
+process.wait();
 
 create_link('.screenrc', 'screen');
 create_link('.vimrc', 'vim');
