@@ -79,4 +79,6 @@ create_link('.bashrc', 'bash');
 # Adding in git-completion.bash
 create_link('git-completion.bash', 'bash');
 create_link('tmux-completion.bash', 'bash');
+create_link('tmux-sessions.bash', 'bash');
 create_link('git_diff_wrapper', 'bin', True);
+create_link('killsess', 'bin', True);

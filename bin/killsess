@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+for arg in $@
+do
+	tmux kill-session -t $arg
+done
