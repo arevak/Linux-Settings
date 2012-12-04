@@ -29,6 +29,9 @@ if [ -f ~/tmux-sessions.bash ]; then
 	. ~/tmux-sessions.bash
 fi
 
+# 256 color for putty
+export TERM='xterm-256color'
+
 # Importing previously existing (or overridden bashrc via .bashrc.local which is made from init.py
 if [ -f ~/.bashrc.local ]; then
 	. ~/.bashrc.local
