@@ -43,7 +43,6 @@ def create_link(targetname, srcdir, singlefile=False):
 	else:
 		print lntarget + " already exists";
 
-create_link('.screenrc', 'screen');
 create_link('.vimrc', 'vim');
 create_link('.vim', 'vim');
 create_link('.ackrc', 'ack');
