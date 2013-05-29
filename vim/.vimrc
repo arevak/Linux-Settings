@@ -1,3 +1,6 @@
+call pathogen#infect()
+call pathogen#helptags()
+
 if $COLORTERM == 'gnome-terminal'
 	set t_Co=256
 endif
@@ -18,4 +21,3 @@ colorscheme xoria256
 :filetype plugin on
 
 source $HOME/.vim/mappings.vim
-source $HOME/.vim/huddler.vim
