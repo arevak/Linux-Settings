@@ -2,6 +2,7 @@
 import sys;
 import os;
 import shutil;
+import subprocess;
 
 basePath = os.path.dirname(os.path.realpath(__file__));
 
@@ -43,10 +44,24 @@ def create_link(targetname, srcdir, singlefile=False):
 	else:
 		print lntarget + " already exists";
 
+cmd = "git submodule init".split(" ");
+process = subprocess.Popen(cmd, stdout=subprocess.PIPE);
+for line in process.stdout:
+	print line;
+process.wait();
+
+cmd = "git submodule update".split(" ");
+process = subprocess.Popen(cmd, stdout=subprocess.PIPE);
+for line in process.stdout:
+	print line;
+process.wait();
+
+create_link('.tmux.conf', 'tmux');
 create_link('.vimrc', 'vim');
 create_link('.vim', 'vim');
 create_link('.ackrc', 'ack');
 create_link('.gitconfig', 'git');
+create_link('sessions', 'tmux');
 
 # Update and install vim plugins in externals
 install_vim_plugin('vim-session');
@@ -62,4 +77,7 @@ create_link('.bashrc', 'bash');
 
 # Adding in git-completion.bash
 create_link('git-completion.bash', 'bash');
+create_link('tmux-completion.bash', 'bash');
+create_link('tmux-sessions.bash', 'bash');
 create_link('git_diff_wrapper', 'bin', True);
+create_link('killsess', 'bin', True);
