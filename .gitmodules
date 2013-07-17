@@ -1,9 +1,18 @@
-[submodule "externals/vim-session"]
-	path = externals/vim-session
+[submodule "vim/.vim/bundle/vim-fugutive"]
+	path = vim/.vim/bundle/vim-fugutive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "vim/.vim/bundle/vim-session"]
+	path = vim/.vim/bundle/vim-session
 	url = git://github.com/xolox/vim-session.git
-[submodule "externals/vim-fugitive"]
-	path = externals/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
-[submodule "externals/vim-perl"]
-	path = externals/vim-perl
-	url = https://github.com/vim-perl/vim-perl
+[submodule "vim/.vim/bundle/snipmate.vim"]
+	path = vim/.vim/bundle/snipmate.vim
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "vim/.vim/bundle/vim-surround"]
+	path = vim/.vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "vim/.vim/bundle/colorpack.git"]
+	path = vim/.vim/bundle/colorpack.git
+	url = git://github.com/vim-scripts/Colour-Sampler-Pack.git
+[submodule "vim/.vim/bundle/vim-misc"]
+	path = vim/.vim/bundle/vim-misc
+	url = http://github.com/xolox/vim-misc

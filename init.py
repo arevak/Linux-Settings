@@ -56,7 +56,6 @@ for line in process.stdout:
 	print line;
 process.wait();
 
-#create_link('.screenrc', 'screen'); # using tmux now instead of screen
 create_link('.tmux.conf', 'tmux');
 create_link('.vimrc', 'vim');
 create_link('.vim', 'vim');

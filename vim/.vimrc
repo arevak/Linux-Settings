@@ -1,3 +1,6 @@
+call pathogen#infect()
+call pathogen#helptags()
+
 if $COLORTERM == 'gnome-terminal'
 	set t_Co=256
 endif
@@ -32,3 +35,7 @@ call add(g:session_persist_globals, 'g:session_default_to_last')
 call add(g:session_persist_globals, 'g:session_session_persist_globals')
 
 source $HOME/.vim/mappings.vim
+<<<<<<< HEAD
+=======
+source $HOME/.vim/session.vim
+>>>>>>> f00115536a214f7aba6928cc2c746da21ab0f772
