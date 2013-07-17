@@ -1,0 +1,5 @@
+--sort-files
+--color
+--pager=less -r
+--ignore-dir=rsrc
+--ignore-dir=build

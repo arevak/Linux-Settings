@@ -30,7 +30,10 @@ if [ -f ~/tmux-sessions.bash ]; then
 fi
 
 # 256 color for putty
-export TERM='xterm-256color'
+if [[ "$TERM" != "screen-256color" ]]
+then
+    export TERM='xterm-256color'
+fi
 
 # Importing previously existing (or overridden bashrc via .bashrc.local which is made from init.py
 if [ -f ~/.bashrc.local ]; then
@@ -38,7 +41,7 @@ if [ -f ~/.bashrc.local ]; then
 fi
 
 if which ctags >/dev/null; then
-	function gentags {
+	function gentagsPHP {
 		ctags -f ~/.vim/mytags/$1 -h \".php\" -R --exclude=\"\.git\" --totals=yes --tag-relative=yes --PHP-kinds=cfiv \
 	--regex-PHP='/(abstract)?\s+class\s+([^ ]+)/\2/c/' \
 	--regex-PHP='/(static|abstract|public|protected|private)\s+(final\s+)?function\s+(\&\s+)?([^ (]+)/\4/f/' \
@@ -46,4 +49,8 @@ if which ctags >/dev/null; then
 	--regex-PHP='/\$([a-zA-Z_][a-zA-Z0-9_]*)/\1/v/' \
 	-R
 	}
+
+    function gentagsPerl {
+        ctags -f tags --exclude=.svn --exclude='*~' --languages=Perl --langmap=Perl:+.t -R *
+    }
 fi

@@ -11,3 +11,8 @@
 
 :nnoremap <c-j> /<+.\{-1,}+><cr>c/+>/e<cr>
 :inoremap <c-j> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr>
+
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+compiler perlcritic
+map <F5> :silent<space>make<space><cr>:redraw!<cr>
