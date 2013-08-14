@@ -62,11 +62,7 @@ create_link('.vim', 'vim');
 create_link('.ackrc', 'ack');
 create_link('.gitconfig', 'git');
 create_link('sessions', 'tmux');
-
-# Update and install vim plugins in externals
-install_vim_plugin('vim-session');
-install_vim_plugin('vim-fugitive');
-install_vim_plugin('vim-perl');
+create_link('.global_ignore', 'git');
 
 # For bash take the existing .bashrc rename it and relink it as .bashrc.local then link in this bashrc
 bashrc = os.environ["HOME"]+"/.bashrc";
