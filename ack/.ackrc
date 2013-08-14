@@ -3,3 +3,4 @@
 --pager=less -r
 --ignore-dir=rsrc
 --ignore-dir=build
+--ignore-dir=nytprof
