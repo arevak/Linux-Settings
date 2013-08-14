@@ -11,8 +11,6 @@ alias la='ls -lah --color'
 alias lt='ls -lth --color'
 alias lh='ls -lSh --color'
 
-PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
-
 # Prevent XOFF from being sent from keyboard but still allowing sofftware to send the commands
 stty ixoff -ixon
 
@@ -39,6 +37,10 @@ fi
 if [ -f ~/.bashrc.local ]; then
 	. ~/.bashrc.local
 fi
+
+# Enforce my prompt
+PS1='[\t \u@\h \W$(__git_ps1 " (%s)")]\$ '
+
 
 if which ctags >/dev/null; then
 	function gentagsPHP {
