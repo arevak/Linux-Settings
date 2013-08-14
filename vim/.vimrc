@@ -34,8 +34,7 @@ call add(g:session_persist_globals, 'g:session_autosave')
 call add(g:session_persist_globals, 'g:session_default_to_last')
 call add(g:session_persist_globals, 'g:session_session_persist_globals')
 
+autocmd BufWritePre * :%s/\s\+$//e
+
 source $HOME/.vim/mappings.vim
-<<<<<<< HEAD
-=======
 source $HOME/.vim/session.vim
->>>>>>> f00115536a214f7aba6928cc2c746da21ab0f772
