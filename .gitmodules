@@ -19,3 +19,6 @@
 [submodule "vim/.vim/bundle/vim-shebang"]
 	path = vim/.vim/bundle/vim-shebang
 	url = https://github.com/vitalk/vim-shebang
+[submodule "vim/.vim/bundle/vim-perl"]
+	path = vim/.vim/bundle/vim-perl
+	url = https://github.com/vim-perl/vim-perl
