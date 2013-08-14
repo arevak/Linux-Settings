@@ -1,5 +1,6 @@
 [core]
 	editor = vim
+    excludesfile = ~/git/.global_ignore
 [alias]
 	stat = status -s
 	outbound = diff --cached
