@@ -22,3 +22,6 @@
 [submodule "vim/.vim/bundle/vim-perl"]
 	path = vim/.vim/bundle/vim-perl
 	url = https://github.com/vim-perl/vim-perl
+[submodule "vim/.vim/bundle/vim-unimpaired"]
+	path = vim/.vim/bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired
