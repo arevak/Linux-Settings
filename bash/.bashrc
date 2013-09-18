@@ -40,7 +40,7 @@ fi
 
 # Enforce my prompt
 PS1='[\t \u@\h \W$(__git_ps1 " (%s)")]\$ '
-
+export PATH=$PATH:~/bin
 
 if which ctags >/dev/null; then
 	function gentagsPHP {

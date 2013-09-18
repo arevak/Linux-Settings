@@ -14,5 +14,3 @@
 
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
-compiler perlcritic
-map <F5> :silent<space>make<space><cr>:redraw!<cr>
