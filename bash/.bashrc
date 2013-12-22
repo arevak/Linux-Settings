@@ -10,6 +10,7 @@ alias ll='ls -lh --color'
 alias la='ls -lah --color'
 alias lt='ls -lth --color'
 alias lh='ls -lSh --color'
+alias tmux='tmux -2'
 
 # Prevent XOFF from being sent from keyboard but still allowing sofftware to send the commands
 stty ixoff -ixon
@@ -56,3 +57,4 @@ if which ctags >/dev/null; then
         ctags -f tags --exclude=.svn --exclude='*~' --languages=Perl --langmap=Perl:+.t -R *
     }
 fi
+export PATH=/usr/local/bin:$PATH

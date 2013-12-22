@@ -1,9 +1,7 @@
 call pathogen#infect()
 call pathogen#helptags()
 
-if $COLORTERM == 'gnome-terminal'
-	set t_Co=256
-endif
+" set t_Co=256
 
 " set backspace=indent,eol,start
 " set smartindent
