@@ -28,3 +28,6 @@
 [submodule "vim/.vim/bundle/vim-snipmate"]
 	path = vim/.vim/bundle/vim-snipmate
 	url = https://github.com/msanders/snipmate.vim
+[submodule "vim/.vim/bundle/vim-vdebug"]
+	path = vim/.vim/bundle/vim-vdebug
+	url = git@github.com:joonty/vdebug.git
