@@ -43,3 +43,6 @@
 [submodule "vim/.vim/bundle/vim-phpctags"]
 	path = vim/.vim/bundle/vim-phpctags
 	url = https://github.com/vim-php/tagbar-phpctags.vim.git
+[submodule "vim/.vim/bundle/vim-misc"]
+	path = vim/.vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc.git
