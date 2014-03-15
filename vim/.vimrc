@@ -29,3 +29,5 @@ autocmd BufWritePre * :%s/\s\+$//e
 source $HOME/.vim/mappings.vim
 source $HOME/.vim/session.vim
 source $HOME/.vim/filemaps.vim
+source $HOME/.vim/vdebug.vim
+source $HOME/.vim/phpctags.vim

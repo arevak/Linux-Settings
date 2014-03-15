@@ -9,8 +9,7 @@
 :nmap <C-n> :tabnew<Space>
 :imap <C-n> <Esc>:tabnew<Space>
 
-:nnoremap <c-j> /<+.\{-1,}+><cr>c/+>/e<cr>
-:inoremap <c-j> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr>
+nmap <Leader><F8> :TagbarToggle<CR>
 
-autocmd QuickFixCmdPost [^l]* nested cwindow
-autocmd QuickFixCmdPost    l* nested lwindow
+"autocmd QuickFixCmdPost [^l]* nested cwindow
+"autocmd QuickFixCmdPost    l* nested lwindow

@@ -3,4 +3,4 @@
 --ignore-dir=rsrc
 --ignore-dir=build
 --ignore-dir=nytprof
--s 
+-s
